@@ -1,6 +1,6 @@
 //Puxar dados da tabela
 let linhas = document.querySelectorAll("tbody tr");
-
+//laço 
 linhas.forEach(linha => {
 
     let altura = parseFloat(linha.children[2].textContent);
@@ -11,14 +11,14 @@ linhas.forEach(linha => {
 
     linha.children[4].textContent = imc;
     linha.children[5].textContent = classificacao;
-
+    
 });
 
 //calcular o IMC e descrever
 function calcularIMC(peso, altura) {
     return (peso / (altura * altura)).toFixed(2);
 }
-
+//Clasificação
 function classificarIMC(imc) {
     if (imc < 18.5) return "Abaixo do peso";
     if (imc < 25) return "Peso normal";
